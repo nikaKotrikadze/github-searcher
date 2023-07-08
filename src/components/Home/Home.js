@@ -17,7 +17,11 @@ const Home = () => {
         onSubmit={handleSubmit}
       >
         <label>Find Anyone on Github with their username</label>
-        <input onChange={handleChange} value={searchUsername} type="text" />
+        <input
+          onChange={handleChange}
+          value={searchUsername || ""}
+          type="text"
+        />
         <h1>You are searching for {searchUsername ? searchUsername : "..."}</h1>
         <button
           type="submit"
@@ -54,7 +58,7 @@ const Home = () => {
           </h1>
         </button>
       </form>
-      {user && <Card user={user} />}
+      {user && <Card key={user.id} user={user} />}
       {searchUsername && !user && (
         <div style={{ marginTop: "20px" }}>
           <p>There is no user with the username: {searchUsername}</p>

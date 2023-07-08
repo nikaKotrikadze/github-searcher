@@ -3,9 +3,9 @@ import axios from "axios";
 
 export const DataFetching = () => {
   const [user, setUser] = useState(null);
-  const [searchUsername, setSearchUsername] = useState(null);
+  const [searchUsername, setSearchUsername] = useState("");
 
-  const baseURL = process.env.GITHUB_KEY;
+  const baseURL = process.env.REACT_APP_BASE_URL;
 
   const handleChange = (e) => {
     setSearchUsername(e.target.value);
@@ -27,7 +27,6 @@ export const DataFetching = () => {
     fetchData();
   };
 
-  console.log(user);
   return {
     user,
     searchUsername,
