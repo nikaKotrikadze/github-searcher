@@ -2,8 +2,16 @@ import React from "react";
 import Card from "../Card/Card";
 import { DataFetching } from "../DataFetching/DataFetching";
 import homeStyles from "./homeStyles.module.css";
+
 const Home = () => {
-  const { user, searchUsername, handleChange, handleSubmit } = DataFetching();
+  const {
+    user,
+    searchUsername,
+    showNoUserMessage,
+    handleChange,
+    handleSubmit,
+  } = DataFetching();
+
   return (
     <div>
       <form className={homeStyles.formContainer} onSubmit={handleSubmit}>
@@ -22,7 +30,7 @@ const Home = () => {
         </button>
       </form>
       {user && <Card key={user.id} user={user} />}
-      {!user && (
+      {showNoUserMessage && !user && (
         <div className={homeStyles.noUserContainer}>
           <p>There is no user with the username: {searchUsername}</p>
         </div>
