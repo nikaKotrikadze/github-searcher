@@ -1,0 +1,25 @@
+.cardContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.cardImageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  color: white;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+}
+.cardImage {
+  width: 100px;
+  border-radius: 50px;
+}

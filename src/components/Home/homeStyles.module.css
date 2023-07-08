@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.inputLabel {
+  color: whitesmoke;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+
+.usernameInput {
+  border: none;
+  width: 300px;
+  height: 30px;
+  background: transparent;
+  border-bottom: 2px solid black;
+  outline: none;
+  text-align: center;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.usernameInput:focus {
+  border: none;
+  width: 330px;
+  border-bottom: 2px solid black;
+}
+
+.usernameButton {
+  background-color: #5078f2;
+  background-image: linear-gradient(315deg, #5078f2 0%, #efe9f4 74%);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.usernameButton:hover {
+  transform: scale(1.03);
+}
+
+.usernameButtonText {
+  font-size: 30px;
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, white 40%, #5899e2 60%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  transition: 0.5s;
+}
+
+.noUserContainer {
+  margin-top: 20px;
+}

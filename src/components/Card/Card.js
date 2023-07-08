@@ -1,37 +1,14 @@
 import React from "react";
+import cardStyles from "./cardStyles.module.css";
 
 const Card = ({ user }) => {
   return (
-    <div
-      style={{
-        marginTop: "20px",
-        display: "flex",
-        flexDirection: "column",
-        flexWrap: "wrap",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "100%",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#2a2a72",
-          backgroundImage: "linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)",
-          color: "white",
-          minWidth: 300,
-          padding: 20,
-          borderRadius: 20,
-        }}
-      >
+    <div className={cardStyles.cardContainer}>
+      <div className={cardStyles.cardImageContainer}>
         <img
           src={user.avatar_url}
           alt={user.login}
-          width={100}
-          style={{ borderRadius: 50 }}
+          className={cardStyles.cardImage}
         />
         {user.login && <h4>login : {user.login}</h4>}
         {user.bio && <h4>bio : {user.bio}</h4>}
