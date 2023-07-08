@@ -1,10 +1,10 @@
 import "./App.css";
-import DataFetching from "./components/DataFetching/DataFetching";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <Home />
     </div>
   );
 }
