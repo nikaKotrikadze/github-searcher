@@ -14,7 +14,7 @@ export const DataFetching = () => {
 
   const fetchData = async () => {
     try {
-      const response = axios.get(baseURL + searchUsername);
+      const response = await axios.get(baseURL + searchUsername);
       setUser(response.data);
       setShowNoUserMessage(false);
     } catch (error) {
