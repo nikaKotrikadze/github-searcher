@@ -12,17 +12,15 @@ export const DataFetching = () => {
     setSearchUsername(e.target.value);
   };
 
-  const fetchData = () => {
-    axios
-      .get(baseURL + searchUsername)
-      .then((res) => {
-        setUser(res.data);
-        setShowNoUserMessage(false);
-      })
-      .catch((error) => {
-        setUser(null);
-        setShowNoUserMessage(true);
-      });
+  const fetchData = async () => {
+    try {
+      const response = axios.get(baseURL + searchUsername);
+      setUser(response.data);
+      setShowNoUserMessage(false);
+    } catch (error) {
+      setUser(null);
+      setShowNoUserMessage(true);
+    }
   };
 
   const handleSubmit = (e) => {
